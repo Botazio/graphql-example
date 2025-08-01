@@ -28,6 +28,9 @@ public class Product {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "userId")
+    private Long userId;
+
     public Product() {
     }
 

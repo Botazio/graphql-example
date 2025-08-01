@@ -4,10 +4,11 @@
 
 This project is a clone from https://github.com/apollographql/federation-jvm-spring-example
 
-The repository contains two separate projects:
+The repository contains three separate projects:
 
-1. `products-subgraph`: A Java GraphQL service providing the federated `Product` type
+1. `products-subgraph`: A Java GraphQL service providing the federated `Product` type. It uses Spring JPA to store the products.
 2. `reviews-subgraph`: A Java GraphQL service that extends the `Product` type with `reviews`
+3. `users-subgraph`: A Java GraphQL service that extends the `Product` type with `user`
 
 See individual projects READMEs for detailed instructions on how to run them.
 
@@ -16,7 +17,8 @@ Running the demo
 
 1. Start `products-subgraph` by running the `ProductsApplication` Spring Boot app from the IDE or by running `./gradlew :products-subgraph:bootRun` from the root project directory
 2. Start `reviews-subgraph` by running the `ReviewsApplication` Spring Boot app from the IDE or `./gradlew :reviews-subgraph:bootRun` from the root project directory
-3. Start Federated Router
+3. Start `users-subgraph` by running the `UsersApplication` Spring Boot app from the IDE or `./gradlew :users-subgraph:bootRun` from the root project directory
+4. Start Federated Router
     1. Install [rover CLI](https://www.apollographql.com/docs/rover/getting-started) using npm
     2. Start router and compose products schema using [rover dev command](https://www.apollographql.com/docs/rover/commands/dev)
 
@@ -25,7 +27,7 @@ Running the demo
     rover dev --supergraph-config supergraph.yaml
     ```
 
-4. Open http://localhost:4000 for the query editor
+5. Open http://localhost:4000 for the query editor
 
 Example federated query
 
