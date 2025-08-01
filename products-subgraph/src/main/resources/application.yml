@@ -2,6 +2,23 @@ spring:
   graphql:
     graphiql:
       enabled: true
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        format_sql: true
+    hibernate:
+      ddl-auto: update  # previously: none
+    show-sql: true
+
+  docker:
+    compose:
+      enabled: true  # previously: false
+      file: products-subgraph/compose-app.yml
+      start:
+        skip: never
 logging:
   level:
     org.springframework.graphql: DEBUG

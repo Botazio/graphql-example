@@ -1,0 +1,21 @@
+# Docker compose que se levanta automáticamente mediante Spring Boot con la aplicación y se usa para tests
+version: '3.8'
+
+
+services:
+
+  db-app-postgres:
+    image: postgres:12.0
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: secret
+    ports:
+      - '5432:5432'
+    volumes:
+      - bd_data:/var/lib/postgresql/data
+    labels:
+      org.springframework.boot.readiness-check.tcp.disable: true
+
+volumes:
+  bd_data:
