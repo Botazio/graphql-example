@@ -1,7 +1,8 @@
 # Federation JVM Spring Example
 
 [Apollo Federation JVM](https://github.com/apollographql/federation-jvm) example implementation using [Spring for GraphQL](https://docs.spring.io/spring-graphql/docs/current/reference/html/).
-If you want to discuss the project or just say hi, stop by [the Apollo community forums](https://community.apollographql.com/).
+
+This project is a clone from https://github.com/apollographql/federation-jvm-spring-example
 
 The repository contains two separate projects:
 
